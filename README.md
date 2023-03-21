@@ -1,3 +1,19 @@
+    # Proje Açıklaması:
+        Bu proje, bir film listesi uygulaması geliştirmenizi gerektirir. Kullanıcılar, uygulamayı kullanarak film arayabilir, filmler hakkında bilgi alabilir, favorilerine ekleyebilir ve izledikleri filmleri işaretleyebilir.
+
+    # Gereksinimler:
+    •	Kullanıcıların film listesini görüntülemesi, filmler hakkında bilgi alabilmesi ve arama yapabilmesi gerekiyor. Bu özellik, bir JSON dosyasından filmlerle ilgili verileri çekecek şekilde tasarlanmalıdır.
+    •	Kullanıcıların filmleri favorilerine ekleyebilmesi ve favori filmlerini görüntüleyebilmesi gerekiyor. Bu özellik, kullanıcıların tarayıcılarındaki yerel depolama (local storage) alanında tutulacak şekilde tasarlanmalıdır.
+    •	Kullanıcıların izledikleri filmleri işaretleyebilmesi ve izleme geçmişlerini görüntüleyebilmesi gerekiyor. Bu özellik, kullanıcıların tarayıcılarındaki yerel depolama (local storage) alanında tutulacak şekilde tasarlanmalıdır.
+    •	Kullanıcıların arama sonuçlarını filtrelenebilir hale getirebilmesi gerekiyor. Filtreler, tür, yıl ve imdb puanına göre seçilebilir olmalıdır.
+    •	Uygulama, responsive bir tasarıma sahip olmalıdır.
+
+    # Proje Notları:
+    •	Uygulama, React veya Next JS kullanılarak geliştirilmelidir.
+    •	JSON dosyasından veri çekimi yapılacaktır. Veri kayıtları için LocalStorage kullanılabilir.
+    •	Tasarım için basit düzeyde CSS veya CSS frameworkleri (Tailwind, Bootstrap veya Material UI) kullanılabilir.
+    •	Proje, GitHub gibi bir Git servisi kullanılarak sürüm kontrolü yapılacak şekilde yönetilmelidir.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
