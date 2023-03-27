@@ -1,9 +1,20 @@
 import React from "react";
+import OutlinedCard from "../COMPONENTS/Card";
 
 function HomePage(props) {
   return (
     <>
-      <h1>homepage</h1>
+
+    <div  class="HomePage">
+      <OutlinedCard/>
+      <OutlinedCard/>
+      <OutlinedCard/>
+
+      <OutlinedCard/>
+      <OutlinedCard/>
+      <OutlinedCard/>
+    </div>
+  
     </>
   );
 }

@@ -11,13 +11,14 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 const drawerWidth = 240;
 const navItems = ["Anasayfa", "Filmler", "Diziler", "Listem"];
+
+// nav bar is also here too 
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -51,7 +52,7 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar component="nav" >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -98,7 +99,6 @@ function DrawerAppBar(props) {
           {drawer}
         </Drawer>
       </Box>
-
       <Toolbar />
     </Box>
   );

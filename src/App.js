@@ -11,8 +11,6 @@ function App() {
     <>
       <div className="Page">
 
-
-        
         <div className="Content">
         <div className="AppBar">
           <DrawerAppBar />
