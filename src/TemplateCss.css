@@ -1,10 +1,9 @@
 .Page {
   display: flex;
-
+  flex-grow: 1;
   background-color: rgb(80, 255, 214);
 
   width: fit-content;
-
 
 }
 
@@ -19,13 +18,16 @@
 
   height: auto;
 
+  width: 100%;
   background-color: rgb(75, 42, 165);
+
 
 
 }
 
 
 .AppBar {
+  background-color: bisque;
 }
 
 .Center {
@@ -35,7 +37,14 @@
 }
 
 
+.Card{
 
+  background-color:aliceblue;
+  border-radius: 10px;
+  gap:10px;
+  margin-top: 10px;
+
+}
 
 .HomePage{
   display: flex;
@@ -44,7 +53,22 @@
 
   flex-wrap: wrap;
 
+  flex-grow:1; 
+
   gap:10px;
 
 
+}
+
+
+.footer {
+  display: flex;
+
+  flex-direction: row;
+  align-items: flex-start;
+  border-radius: 10px;
+  margin-top: 5%;
+  background-color: aliceblue;
+  justify-content: space-between;
+  padding: 1%;
 }
