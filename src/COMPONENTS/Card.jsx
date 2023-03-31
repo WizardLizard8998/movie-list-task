@@ -8,7 +8,16 @@ import Typography from "@mui/material/Typography";
 import Checkbox from "@mui/material/Checkbox";
 
 function FCard(props) {
-  const { filmId, filmname, filmdesc, filmimdb, filmyear, filmtype } = props;
+  const {
+    filmId,
+    filmname,
+    filmdesc,
+    filmimdb,
+    filmyear,
+    filmtype,
+    izlendionClick,
+    favonClick,
+  } = props;
   const [checked, setChecked] = React.useState(false);
 
   const ChangeBox = () => {
@@ -26,16 +35,10 @@ function FCard(props) {
       <React.Fragment>
         <CardContent>
           <Typography variant="h5" component="div">
-            {filmname} 
+            {filmname}
           </Typography>
           <Typography sx={{ mb: 1.5 }} color="text.secondary">
             Film Açıklaması: <br />
-            Genç ve başarılı bir bankacı olan Andy Dufresne, karısını ve onun
-            sevgilisini öldürmek suçundan ömür boyu hapse mahkum edilir ve
-            Shawshank hapishanesine gönderilir. Burada başta Red olmak üzere
-            yeni arkadaşlar edinir. Hapishane yaşamını uyum sağlamaya çalışırken
-            diğer yandan da bilgisi ve kültürüyle etrafındaki insanları
-            etkilemeyi başaracaktır.
             {filmdesc}
             <br />
             <br /> imdb: {filmimdb}
@@ -48,12 +51,16 @@ function FCard(props) {
           </Typography>
         </CardContent>
         <CardActions>
-          {checked} izlendi checkbox
+          {checked}
+          <Button variant="outlined" onClick={izlendionClick}>İzlendi</Button>
           <Checkbox onChange={ChangeBox} />
         </CardActions>
         <CardActions>
-          {checked} fav checkbox
-          <Checkbox onChange={ChangeBox} />
+          {checked}
+          <Button variant="outlined" onClick={favonClick}>
+            Favori
+          </Button>
+          <Checkbox id="favCB" onChange={ChangeBox} />
         </CardActions>
       </React.Fragment>
     </>
@@ -61,7 +68,16 @@ function FCard(props) {
 }
 
 export default function OutlinedCard(props) {
-  const { filmId, filmname, filmdesc, filmimdb, filmyear, filmtype } = props;
+  const {
+    filmId,
+    filmname,
+    filmdesc,
+    filmimdb,
+    filmyear,
+    filmtype,
+    izlendi,
+    fav,
+  } = props;
 
   return (
     <Box class="Card" sx={{ minWidth: 500 }}>
@@ -72,6 +88,8 @@ export default function OutlinedCard(props) {
         filmimdb={filmimdb}
         filmyear={filmyear}
         filmtype={filmtype}
+        izlendionClick={izlendi}
+        favonClick={fav}
       />
     </Box>
   );

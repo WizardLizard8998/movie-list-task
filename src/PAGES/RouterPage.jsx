@@ -9,6 +9,7 @@ import SearchPage from "./SearchPage";
 
 import "../TemplateCss.css";
 import Footer from "../COMPONENTS/Footer";
+import LoginPage from "./LoginPage";
 
 function RouterPage(props) {
   return (
@@ -20,9 +21,9 @@ function RouterPage(props) {
 
         <div class="Page">
           <div class="Content">
-            <div class="Center">
+           
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<LoginPage />} />
         </Routes>
 
         <Routes>
@@ -36,7 +37,7 @@ function RouterPage(props) {
         <Routes>
           <Route path="/dev" element={<OutlinedCard />} />
         </Routes>
-            </div>
+           
 
         <div class="Footer">
         <Footer />

@@ -2,8 +2,8 @@
         Bu proje, bir film listesi uygulaması geliştirmenizi gerektirir. Kullanıcılar, uygulamayı kullanarak film arayabilir, filmler hakkında bilgi alabilir, favorilerine ekleyebilir ve izledikleri filmleri işaretleyebilir.
 
     # Gereksinimler:
-    •	Kullanıcıların film listesini görüntülemesi, filmler hakkında bilgi alabilmesi ve arama yapabilmesi gerekiyor. Bu özellik, bir JSON dosyasından filmlerle ilgili verileri çekecek şekilde tasarlanmalıdır.
-    •	Kullanıcıların filmleri favorilerine ekleyebilmesi ve favori filmlerini görüntüleyebilmesi gerekiyor. Bu özellik, kullanıcıların tarayıcılarındaki yerel depolama (local storage) alanında tutulacak şekilde tasarlanmalıdır.
+    •	Kullanıcıların film listesini görüntülemesi, filmler hakkında bilgi alabilmesi ve arama yapabilmesi gerekiyor. Bu özellik, bir JSON dosyasından filmlerle ilgili verileri çekecek şekilde tasarlanmalıdır. // tamam //
+    •	Kullanıcıların filmleri favorilerine ekleyebilmesi ve favori filmlerini görüntüleyebilmesi gerekiyor. Bu özellik, kullanıcıların tarayıcılarındaki yerel depolama (local storage) alanında tutulacak şekilde tasarlanmalıdır. // local storage //
     •	Kullanıcıların izledikleri filmleri işaretleyebilmesi ve izleme geçmişlerini görüntüleyebilmesi gerekiyor. Bu özellik, kullanıcıların tarayıcılarındaki yerel depolama (local storage) alanında tutulacak şekilde tasarlanmalıdır.
     •	Kullanıcıların arama sonuçlarını filtrelenebilir hale getirebilmesi gerekiyor. Filtreler, tür, yıl ve imdb puanına göre seçilebilir olmalıdır.
     •	Uygulama, responsive bir tasarıma sahip olmalıdır.

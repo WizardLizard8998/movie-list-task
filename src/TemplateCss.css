@@ -1,23 +1,21 @@
 .Page {
   display: flex;
-  flex-grow: 1;
+  
+  
   background-color: rgb(80, 255, 214);
-
-  width: fit-content;
+  min-width: fit-content;
+  min-height: 1000px;
 
 }
 
 .Content {
   display: flex;
   flex-direction: column;
-
   justify-self: stretch;
-
+  flex:1;
   padding-left: 1%;
   padding-right: 1%;
-
   height: auto;
-
   width: 100%;
   background-color: rgb(75, 42, 165);
 
@@ -26,14 +24,30 @@
 }
 
 
+.LoginBox{
+  display: flex;
+
+  flex-direction: column;
+
+  background-color: azure;
+  border-radius: 10px;
+
+  color: black;
+  
+  justify-content:center;
+
+  min-width: 100px;
+  min-height: 200px;
+
+  gap: 20px;
+
+  margin: 5%;
+  align-items: center;
+}
+
+
 .AppBar {
   background-color: bisque;
-}
-
-.Center {
-}
-
-.Footer {
 }
 
 
@@ -47,23 +61,18 @@
 }
 
 .HomePage{
+
   display: flex;
-
   flex-direction: row;
-
   flex-wrap: wrap;
-
   flex-grow:1; 
-
   gap:10px;
-
-
 }
 
 
 .footer {
-  display: flex;
 
+  display: flex;
   flex-direction: row;
   align-items: flex-start;
   border-radius: 10px;
