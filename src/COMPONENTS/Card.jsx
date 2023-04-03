@@ -7,28 +7,47 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Checkbox from "@mui/material/Checkbox";
 
+import { favClick } from "../API/StorageAPI";
+
 function FCard(props) {
-  const {
-    filmId,
-    filmname,
-    filmdesc,
-    filmimdb,
-    filmyear,
-    filmtype,
-    izlendionClick,
-    favonClick,
-  } = props;
+  const { filmId, filmname, filmdesc, filmimdb, filmyear, filmtype } = props;
+
   const [checked, setChecked] = React.useState(false);
 
-  const ChangeBox = () => {
-    if (checked === true) {
-      setChecked(false);
-    } else {
-      setChecked(true);
+  const watched = (filmId) => {
+
+
+    let uData = localStorage.getItem("UserData");
+    uData = JSON.parse(uData)
+    console.log(localStorage.getItem("UserData"));
+    console.log(uData)
+    
+    uData[filmId].watched= "true"
+    
+    localStorage.setItem("UserData", JSON.stringify(uData));
+    console.log(uData);
+  
+  };
+
+  const fav = (filmId) =>{
+
+    let uData =localStorage.getItem("UserData");
+    uData = JSON.parse(uData);
+    console.log(uData)
+
+    console.log(typeof uData[filmId].favorite)
+
+    if(uData[filmId].favorite === "true"){
+      uData[filmId].favorite = "false";
+    }else if(uData[filmId].favorite === "false"){
+      uData[filmId].favorite = "true";
     }
 
-    console.log(checked);
-  };
+    localStorage.setItem("UserData",JSON.stringify(uData));
+    console.log(uData)
+
+  }
+  
 
   return (
     <>
@@ -51,16 +70,12 @@ function FCard(props) {
           </Typography>
         </CardContent>
         <CardActions>
-          {checked}
-          <Button variant="outlined" onClick={izlendionClick}>İzlendi</Button>
-          <Checkbox onChange={ChangeBox} />
-        </CardActions>
-        <CardActions>
-          {checked}
-          <Button variant="outlined" onClick={favonClick}>
-            Favori
+          <Button variant="outlined" onClick={() => fav(filmId)}>
+            Favoriye Ekle/Çıkar
           </Button>
-          <Checkbox id="favCB" onChange={ChangeBox} />
+          <Button variant="outlined" onClick={() => watched(filmId)}>
+            İzledim
+          </Button>
         </CardActions>
       </React.Fragment>
     </>
@@ -68,16 +83,7 @@ function FCard(props) {
 }
 
 export default function OutlinedCard(props) {
-  const {
-    filmId,
-    filmname,
-    filmdesc,
-    filmimdb,
-    filmyear,
-    filmtype,
-    izlendi,
-    fav,
-  } = props;
+  const { filmId, filmname, filmdesc, filmimdb, filmyear, filmtype } = props;
 
   return (
     <Box class="Card" sx={{ minWidth: 500 }}>
@@ -88,8 +94,6 @@ export default function OutlinedCard(props) {
         filmimdb={filmimdb}
         filmyear={filmyear}
         filmtype={filmtype}
-        izlendionClick={izlendi}
-        favonClick={fav}
       />
     </Box>
   );

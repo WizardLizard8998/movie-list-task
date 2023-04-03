@@ -7,6 +7,7 @@ import "../TemplateCss.css";
 import { useNavigate } from "react-router-dom";
 
 import { UserList } from "../DATA/UserList";
+import {UserData} from "../DATA/UserData"
 
 import { UserDataContext } from "../DATA/DataContext";
 
@@ -22,12 +23,25 @@ function LoginPage(props) {
   console.log(users)
 
   useEffect(() => {
+
+
+    if (
+      localStorage.getItem("UserData") == null 
+      
+      ) {
+        localStorage.setItem("UserData", JSON.stringify(UserData));
+      }
+  
     
     if (
       localStorage.getItem("user") == null 
       
       ) {
         localStorage.setItem("user", JSON.stringify(users));
+        
+        
+      
+      
       }
       
     }, [])
