@@ -5,7 +5,8 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Checkbox from "@mui/material/Checkbox";
+
+import { movies } from "../DATA/Movies";
 
 import { favClick } from "../API/StorageAPI";
 

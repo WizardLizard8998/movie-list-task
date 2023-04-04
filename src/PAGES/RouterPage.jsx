@@ -10,6 +10,7 @@ import SearchPage from "./SearchPage";
 import "../TemplateCss.css";
 import Footer from "../COMPONENTS/Footer";
 import LoginPage from "./LoginPage";
+import ListPage from "./ListPage";
 
 function RouterPage(props) {
   return (
@@ -33,11 +34,15 @@ function RouterPage(props) {
         <Routes>
           <Route path="/Arama" element={<SearchPage/>} />
         </Routes>
+          
+        <Routes>
+          <Route path="/Liste" element={<ListPage />} />
+        </Routes>
 
         <Routes>
           <Route path="/dev" element={<OutlinedCard />} />
         </Routes>
-           
+          
 
         <div class="Footer">
         <Footer />

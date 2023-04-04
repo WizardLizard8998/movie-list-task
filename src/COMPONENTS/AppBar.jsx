@@ -31,7 +31,7 @@ export default function ButtonAppBar() {
             FilmList
           </Typography>
           <Button color="inherit" onClick={()=> {history("/Anasayfa")}}>Anasayfa</Button>
-          <Button color="inherit" onClick={()=> {history("/List")}}>Listem</Button>
+          <Button color="inherit" onClick={()=> {history("/Liste")}}>Listem</Button>
           <Button color="inherit" onClick={()=> {history("/Arama")}}>Arama</Button>
         </Toolbar>
       </AppBar>

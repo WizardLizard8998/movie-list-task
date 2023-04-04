@@ -81,3 +81,31 @@
   justify-content: space-between;
   padding: 1%;
 }
+
+
+.ListPageCard{
+  
+  display: flex;
+  
+  align-items: center;
+  justify-content: flex-start;
+  
+  
+  margin-top: 1%;
+  border-radius: 10px;
+
+}
+
+.favlist{
+  display: flex;
+
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin-top: 1%;
+
+}
+
+.listContent{
+  gap:30px;
+}
