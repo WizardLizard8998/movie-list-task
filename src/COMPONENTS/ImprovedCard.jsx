@@ -8,7 +8,7 @@ import { movies } from "../DATA/Movies";
 
 function ImprovedCard(props) {
     let uData = localStorage.getItem("UserData");
-    console.log(uData);
+   
     const Info = JSON.parse(uData);
   
     const [wdata, setwData] = useState([]);
@@ -22,13 +22,9 @@ function ImprovedCard(props) {
   
       setwData(watched);
   
-      console.log(watched);
-      console.log(favorite);
     }, []);
   
-    console.log(fdata);
   
-    console.log(wdata);
   
     const Favfov = (props) => {
       const { filmid, filmname, filmdesc, filmimdb, filmtype, filmyear } = props;

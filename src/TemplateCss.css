@@ -2,7 +2,7 @@
   display: flex;
   
   
-  background-color: rgb(80, 255, 214);
+  background-color: black;
   min-width: fit-content;
   min-height: 1000px;
 
@@ -17,8 +17,9 @@
   padding-right: 1%;
   height: auto;
   width: 100%;
-  background-color: rgb(75, 42, 165);
+  background-color:#092335;
 
+  color: #f9f9f9;
 
 
 }
@@ -29,10 +30,10 @@
 
   flex-direction: column;
 
-  background-color: azure;
+  background-color: #4d3446;
   border-radius: 10px;
 
-  color: black;
+  color: #f9f9f9;
   
   justify-content:center;
 
@@ -53,7 +54,7 @@
 
 .Card{
 
-  background-color:aliceblue;
+  background-color:#4f697c;
   border-radius: 10px;
   gap:10px;
   margin-top: 10px;
@@ -63,10 +64,12 @@
 .HomePage{
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   flex-grow:1; 
   gap:10px;
+
+
 }
 
 
@@ -77,7 +80,7 @@
   align-items: flex-start;
   border-radius: 10px;
   margin-top: 5%;
-  background-color: aliceblue;
+  background-color: #bacdd6 ;
   justify-content: space-between;
   padding: 1%;
 }
@@ -94,6 +97,7 @@
   margin-top: 1%;
   border-radius: 10px;
 
+  
 }
 
 .favlist{
@@ -107,5 +111,7 @@
 }
 
 .listContent{
-  gap:30px;
+  
+  justify-content: space-between;
+  margin-bottom: 10px;
 }

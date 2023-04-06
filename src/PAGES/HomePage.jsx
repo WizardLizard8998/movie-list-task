@@ -6,13 +6,12 @@ import { movies } from "../DATA/Movies";
 
 
 const user = localStorage.getItem("user");
-console.log(localStorage.getItem("user"));
+
 
 
 function HomePage(props) {
   const data = movies;
 
-  const userid = 1;
 
   return (
     <>

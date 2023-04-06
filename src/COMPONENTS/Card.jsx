@@ -1,14 +1,10 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-import { movies } from "../DATA/Movies";
-
-import { favClick } from "../API/StorageAPI";
 
 function FCard(props) {
   const { filmId, filmname, filmdesc, filmimdb, filmyear, filmtype } = props;
@@ -20,13 +16,12 @@ function FCard(props) {
 
     let uData = localStorage.getItem("UserData");
     uData = JSON.parse(uData)
-    console.log(localStorage.getItem("UserData"));
-    console.log(uData)
+
     
     uData[filmId].watched= "true"
     
     localStorage.setItem("UserData", JSON.stringify(uData));
-    console.log(uData);
+
   
   };
 
@@ -34,9 +29,9 @@ function FCard(props) {
 
     let uData =localStorage.getItem("UserData");
     uData = JSON.parse(uData);
-    console.log(uData)
+  
 
-    console.log(typeof uData[filmId].favorite)
+   
 
     if(uData[filmId].favorite === "true"){
       uData[filmId].favorite = "false";
@@ -45,7 +40,7 @@ function FCard(props) {
     }
 
     localStorage.setItem("UserData",JSON.stringify(uData));
-    console.log(uData)
+   
 
   }
   
@@ -71,10 +66,10 @@ function FCard(props) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button variant="outlined" onClick={() => fav(filmId)}>
+          <Button variant="outlined" color="inherit" onClick={() => fav(filmId)}>
             Favoriye Ekle/Çıkar
           </Button>
-          <Button variant="outlined" onClick={() => watched(filmId)}>
+          <Button variant="outlined" color="inherit" onClick={() => watched(filmId)}>
             İzledim
           </Button>
         </CardActions>

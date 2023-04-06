@@ -20,7 +20,7 @@ function LoginPage(props) {
   const [uname, setUname] = React.useState("");
   const [pass, setPass] = React.useState("");
   
-  console.log(users)
+  
 
   useEffect(() => {
 
@@ -47,8 +47,7 @@ function LoginPage(props) {
     }, [])
   
   const checkLogin = () => {
-    console.log(uname + " " + pass);
-
+   
     users &&
       users.map((data, index) => {
         if (data.userName === uname && data.userPwd === pass) {
